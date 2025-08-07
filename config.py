@@ -3,6 +3,7 @@ from dotenv import load_dotenv
 from openai import OpenAI
 from vanna.remote import VannaDefault
 from langchain_community.embeddings import OpenAIEmbeddings
+from langchain_community.vectorstores import FAISS
 
 # Load environment variables
 load_dotenv()
@@ -36,6 +37,7 @@ MONEY_KEYWORDS = ["loss", "premium", "amount", "cost", "ibnr", "ult", "total", "
 
 # FAISS Configuration
 FAISS_INDEX_PATH = "faiss_index/"
+faiss_index = FAISS.load_local("faiss_index", embedding, allow_dangerous_deserialization=True)
 
 # Documentation for database schema
 DOCUMENTATION = """
