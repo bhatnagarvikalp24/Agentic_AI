@@ -1,0 +1,13 @@
+streamlit
+openai
+python-dotenv
+pandas
+requests
+vanna
+python-docx
+matplotlib
+networkx
+langchain-core
+langgraph
+google-search-results
+python-pptx
